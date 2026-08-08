@@ -1,0 +1,81 @@
+[
+  {
+    "id": "long-vacation-frame-01",
+    "kind": "drama",
+    "title": "悠长假日 · 画面一",
+    "titleEn": "Long Vacation · Frame 01",
+    "series": "悠长假日 / ロングバケーション",
+    "episode": null,
+    "scene": "树影中的建筑；中文字幕提到“音乐教室”（集数待确认）",
+    "location": null,
+    "story": "树影掩映的建筑、窗格和入口构成了这一帧；画面底部的中文字幕提到“音乐教室”。建筑名称、拍摄地和集数仍待确认。",
+    "history": null,
+    "capturedAt": null,
+    "tags": ["日剧", "电视剧截图", "悠长假日", "Long Vacation", "音乐教室", "建筑", "字幕"],
+    "keywords": ["ロングバケーション", "木村拓哉", "山口智子", "1996", "校园", "门廊"],
+    "image": {
+      "localPath": "/memories/long-vacation-01.jpg",
+      "remoteUrl": null,
+      "fileName": "long-vacation-01.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "《悠长假日》画面：树影掩映的建筑与音乐教室字幕"
+    },
+    "status": "draft",
+    "needsConfirmation": ["集数", "建筑名称", "拍摄地点", "字幕原文与上下文"]
+  },
+  {
+    "id": "long-vacation-frame-02",
+    "kind": "drama",
+    "title": "悠长假日 · 画面二",
+    "titleEn": "Long Vacation · Frame 02",
+    "series": "悠长假日 / ロングバケーション",
+    "episode": null,
+    "scene": "JOGX DAIBA 户外广告牌（具体地点待确认）",
+    "location": null,
+    "story": "画面记录了一块写有“JOGX DAIBA”的海边户外广告牌，人物坐在蓝色海景前。广告名称、取景地点和它在剧中的出现方式待确认。",
+    "history": null,
+    "capturedAt": null,
+    "tags": ["日剧", "电视剧截图", "悠长假日", "Long Vacation", "广告", "JOGX DAIBA", "海边"],
+    "keywords": ["ロングバケーション", "户外广告", "广告牌", "90年代", "台场（待确认）"],
+    "image": {
+      "localPath": "/memories/long-vacation-02.jpg",
+      "remoteUrl": null,
+      "fileName": "long-vacation-02.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "《悠长假日》画面：海边的 JOGX DAIBA 户外广告牌"
+    },
+    "status": "draft",
+    "needsConfirmation": ["集数", "广告的准确文字", "广告牌所在地点", "剧中情节关系"]
+  },
+  {
+    "id": "long-vacation-frame-03",
+    "kind": "drama",
+    "title": "悠长假日 · 画面三",
+    "titleEn": "Long Vacation · Frame 03",
+    "series": "悠长假日 / ロングバケーション",
+    "episode": null,
+    "scene": "饮用 ASAHI 罐装啤酒的室内镜头（产品型号与集数待确认）",
+    "location": null,
+    "story": "人物在室内拿起一罐能辨认出“ASAHI”字样的啤酒。它可能是 Asahi Super Dry，但罐型与产品线仍需要从更清晰的原图或同集画面核对。",
+    "history": {
+      "subject": "ASAHI（产品待确认）",
+      "title": "啤酒品牌历史：待核实",
+      "summary": "画面里能辨认出 ASAHI 字样。待确认具体罐型与拍摄年份后，再补充品牌沿革、产品历史以及它在剧中出现的背景。"
+    },
+    "capturedAt": null,
+    "tags": ["日剧", "电视剧截图", "悠长假日", "Long Vacation", "啤酒", "ASAHI", "商品植入"],
+    "keywords": ["ロングバケーション", "木村拓哉", "瀬名秀俊", "1996", "Asahi Super Dry（待确认）", "罐装啤酒"],
+    "image": {
+      "localPath": "/memories/long-vacation-03.jpg",
+      "remoteUrl": null,
+      "fileName": "long-vacation-03.jpg",
+      "width": 1280,
+      "height": 589,
+      "alt": "《悠长假日》画面：人物饮用一罐 ASAHI 啤酒"
+    },
+    "status": "draft",
+    "needsConfirmation": ["集数", "准确产品型号", "品牌历史资料来源", "剧中出现背景"]
+  }
+]

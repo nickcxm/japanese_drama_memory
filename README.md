@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 日本的记忆
 
-## Getting Started
+一个记录日剧、日本旅行与画面之外历史的个人档案网站。
 
-First, run the development server:
+## 本地开发
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 <http://localhost:3000>。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 内容与图片
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 记忆记录保存在 `data/memories.json`。
+- 本地原图放在 `public/memories/`，记录里的 `image.localPath` 是网站的保底 URL。
+- `image.remoteUrl` 用于记录 Imgur 链接；远程链接失效时，前端会自动回退到本地图片。
+- `.env.example` 中的 `IMGUR_CLIENT_ID` 只在服务端使用，不能写进浏览器代码。
+- `POST /api/imgur` 接收 multipart 字段 `file`，上传成功后返回 `url`，再把 URL 写回对应记忆记录。
 
-## Learn More
+当前 3 条记录是《悠长假日》的草稿，已保存本地图片；EXIF 中没有可读的拍摄时间或 GPS，集数、建筑/广告地点和啤酒具体型号暂列为待确认。
 
-To learn more about Next.js, take a look at the following resources:
+## PM2 与 Caddy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+生产构建与 PM2 原子切换：
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm deploy
+pm2 save
+```
 
-## Deploy on Vercel
+应用监听 `127.0.0.1:53120`。Caddy 配置见 `deploy/Caddyfile`，启用后访问 <http://jp.home>。第一次使用时，把下面这一行加入 `/etc/hosts`：
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+127.0.0.1 jp.home
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+验证 Caddy 配置：
+
+```bash
+caddy validate --config deploy/Caddyfile --adapter caddyfile
+```

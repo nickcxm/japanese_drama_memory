@@ -1,0 +1,6 @@
+# Local reverse proxy for the personal archive.
+# Add `127.0.0.1 jp.home` to /etc/hosts once on this machine.
+http://jp.home {
+	encode gzip
+	reverse_proxy 127.0.0.1:53120
+}
