@@ -98,5 +98,40 @@
     },
     "status": "published",
     "needsConfirmation": []
+  },
+  {
+    "id": "okinawa-aharen-beach-2025-09-26",
+    "kind": "travel",
+    "title": "在庆良间蓝里漂浮",
+    "titleEn": "Aharen Beach · Kerama Blue",
+    "series": "冲绳旅行 / Okinawa 2025",
+    "episode": null,
+    "scene": "阿波连海滩海中，黑色潜水衣与远处的岩岛",
+    "location": {
+      "label": "阿波连海滩（阿波連ビーチ）· 渡嘉敷岛",
+      "city": "渡嘉敷村",
+      "prefecture": "冲绳县",
+      "country": "日本"
+    },
+    "story": "2025年9月26日，在渡嘉敷岛阿波连海滩，漂在一片几乎透明的蓝里。人物穿着黑色长袖潜水衣仰浮在海面，远处是海滩外侧低矮、锋利的岩岛；根据阿波连海滩的海岸视角，它很可能是附近的无人岛ハナリ島（Hanari Island）。",
+    "history": {
+      "subject": "阿波连海滩 / Aharen Beach",
+      "title": "庆良间蓝，从一条白色弧线开始",
+      "summary": "日本环境省将阿波连海滩列为庆良间诸岛国立公园渡嘉敷岛的代表海滩：它位于岛的西南侧，拥有湾状而绵长的白色沙滩，也是游泳、浮潜与海上活动的入口。阿波连海滩外海的ハナリ島，则把这片开阔的蓝色海面变成了照片里的第二层地平线。",
+      "sourceUrl": "https://www.env.go.jp/nature/nationalparks/list/kerama-shoto/spot/"
+    },
+    "capturedAt": "2025-09-26",
+    "tags": ["旅行", "冲绳", "渡嘉敷岛", "阿波连海滩", "阿波連ビーチ", "庆良间诸岛", "庆良间蓝", "浮潜", "潜水衣", "海岛", "海上活动", "2025年9月"],
+    "keywords": ["Okinawa", "Tokashiki Island", "Aharen Beach", "Hanari Island", "Kerama Blue", "沖縄旅行", "渡嘉敷村", "珊瑚海域", "海水", "夏末"],
+    "image": {
+      "localPath": "/memories/okinawa-aharen-beach-2025-09-26.jpg",
+      "remoteUrl": null,
+      "fileName": "okinawa-aharen-beach-2025-09-26.jpg",
+      "width": 960,
+      "height": 1280,
+      "alt": "冲绳渡嘉敷岛阿波连海滩：人物漂浮在透明的庆良间蓝中"
+    },
+    "status": "published",
+    "needsConfirmation": []
   }
 ]
