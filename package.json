@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start -H 127.0.0.1 -p 53120",
     "deploy": "node scripts/deploy.mjs",
+    "db:migrate": "node scripts/migrate-json-to-sqlite.mjs",
+    "upload:imgur": "node scripts/upload-imgur.mjs",
     "lint": "eslint"
   },
   "dependencies": {
@@ -24,7 +26,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^24.13.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

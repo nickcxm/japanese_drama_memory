@@ -10,9 +10,9 @@ type MemoryImageProps = {
 };
 
 export function MemoryImage({ memory, featured = false }: MemoryImageProps) {
-  const [remoteAttempted, setRemoteAttempted] = useState(!memory.image.localPath);
+  const [usingRemote, setUsingRemote] = useState(Boolean(memory.image.remoteUrl));
   const [failed, setFailed] = useState(false);
-  const source = remoteAttempted ? memory.image.remoteUrl : memory.image.localPath;
+  const source = usingRemote ? memory.image.remoteUrl : memory.image.localPath;
 
   if (!source || failed) {
     return (
@@ -21,9 +21,9 @@ export function MemoryImage({ memory, featured = false }: MemoryImageProps) {
         <span className="memory-art__number" aria-hidden="true">
           {memory.id.slice(-2).replace("-", "0")}
         </span>
-        <span className="memory-art__label">待上传原图</span>
+        <span className="memory-art__label">影像缺席</span>
         <span className="memory-art__caption">
-          {featured ? "LOCAL IMAGE / FALLBACK READY" : "IMAGE PENDING"}
+          {featured ? "LOCAL COPY / ON FILE" : "IMAGE UNAVAILABLE"}
         </span>
       </div>
     );
@@ -37,8 +37,8 @@ export function MemoryImage({ memory, featured = false }: MemoryImageProps) {
       alt={memory.image.alt}
       loading={featured ? "eager" : "lazy"}
       onError={() => {
-        if (!remoteAttempted && memory.image.remoteUrl) {
-          setRemoteAttempted(true);
+        if (usingRemote && memory.image.localPath) {
+          setUsingRemote(false);
         } else {
           setFailed(true);
         }

@@ -78,7 +78,7 @@ export default function MemoryArchive({ memories, initialSelectedId }: MemoryArc
         </div>
 
         <div className="memory-visual">
-          <MemoryImage memory={selectedMemory} featured />
+          <MemoryImage key={selectedMemory.id} memory={selectedMemory} featured />
           <div className="memory-visual__caption" aria-label="画面基础信息">
             <span>{selectedMemory.series ?? kindLabels[selectedMemory.kind]}</span>
             <strong>{selectedMemory.location?.label ?? "室内场景"}</strong>

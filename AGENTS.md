@@ -26,11 +26,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - 原图必须保存到 `public/memories/`，作为永久本地保底；不能因为上传 Imgur 成功而删除或替换本地文件。
 - 默认必须使用用户自己的 Imgur Client ID 上传到 Imgur。Client ID 只从本机 `.env.local` 或生产环境的 `IMGUR_CLIENT_ID` 读取，不得硬编码到源码、`AGENTS.md`、Git 提交或浏览器端。
-- 上传成功后，必须在本地 JSON 中记录 Imgur 的 `id`、`url`、`deleteHash`（如果 API 返回）和 `uploadedAt`；页面显示远程图片时仍必须保留本地 URL 作为 fallback。
+- 上传成功后，必须在本地数据库的图片上传历史表中记录 Imgur 的 `id`、`url`、`deleteHash`（如果 API 返回）和 `uploadedAt`；页面显示远程图片时仍必须保留本地 URL 作为 fallback。
 - Imgur 上传失败时，仍然保留本地图片，但不能把这张图标记为“已完成上传”；应明确报告失败原因，并在有条件时重试。
 - 每张图片都必须有永久不变的本地 `assetId`，例如 `jdm-0001`。`assetId` 不能因文件重命名、Imgur URL 变化或迁移到其他图床而改变。
-- `data/image-assets.json` 是图片资产清单：记录 `assetId`、对应 `memoryId`、本地路径、原始文件名，以及按 provider 追加的上传记录。`data/memories.json` 中的 `image.assetId` 必须与它一致。
-- 以后迁移到其他图床时，保留原 `assetId` 和本地文件，在 `uploads` 中追加新的 provider 记录；不能覆盖或丢失 Imgur 历史记录。任何迁移脚本都必须依据本地资产清单和 `assetId` 工作。
+- `data/memory.db` 是唯一的本地主数据源，必须提交到 Git。数据库至少包含记忆、图片资产、上传历史、标签和关键词表；每张图片的 `assetId` 必须唯一且永久不变。
+- 以后迁移到其他图床时，保留原 `assetId` 和本地文件，在图片上传历史表中追加新的 provider 记录；不能覆盖或丢失 Imgur 历史记录。任何迁移脚本都必须依据数据库中的 `assetId` 工作。
 - 不要把 Imgur 当作唯一来源；Imgur 被限制上传、图片失效或服务不可用时，网站仍必须能够使用本地图片正常展示。
 
 ### 记忆数据要求
