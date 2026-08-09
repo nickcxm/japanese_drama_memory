@@ -5,6 +5,7 @@ import { ArrowUpRight, CalendarDays, MapPin, Search, X } from "lucide-react";
 import Link from "next/link";
 
 import { MemoryImage } from "@/components/memory-image";
+import { MemoryMap } from "@/components/memory-map";
 import type { Memory, MemoryKind } from "@/lib/memories";
 
 type MemoryIndexProps = {
@@ -197,6 +198,7 @@ export default function MemoryIndex({ memories }: MemoryIndexProps) {
               <div className="tag-row" aria-label="预览记忆的标签">
                 {previewMemory.tags.map((tag) => <span className="tag" key={tag}>#{tag}</span>)}
               </div>
+              {previewMemory.location && <MemoryMap location={previewMemory.location} />}
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight, Camera, Film, MapPin, RefreshCw } from "lucide-react";
 
 import { MemoryImage } from "@/components/memory-image";
+import { MemoryMap } from "@/components/memory-map";
 import type { Memory, MemoryKind } from "@/lib/memories";
 
 type MemoryArchiveProps = {
@@ -118,6 +119,7 @@ export default function MemoryArchive({ memories, initialSelectedId }: MemoryArc
               <dd>{selectedMemory.scene ?? "场景信息未记录"}</dd>
             </div>
           </dl>
+          {selectedMemory.location && <MemoryMap location={selectedMemory.location} />}
         </div>
 
         <div className="memory-page__footer">
