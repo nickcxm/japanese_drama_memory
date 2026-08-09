@@ -58,6 +58,7 @@ export default function MemoryArchive({ memories, initialSelectedId }: MemoryArc
         </a>
         <div className="topbar__meta">
           <span className="topbar__edition">A PERSONAL ARCHIVE</span>
+          <a className="quiet-link" href="/archive">记忆索引</a>
           <button className="quiet-button" type="button" onClick={showRandomMemory}>
             换一段记忆 <RefreshCw size={14} strokeWidth={1.8} />
           </button>
